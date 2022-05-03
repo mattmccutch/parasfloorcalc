@@ -3,15 +3,18 @@ import { pullData } from '../lib/pullData'
 export default function PullButton() {
 
     useEffect(() =>{
-        const data = pullData().then((d)=>{
-            return d;
-        });
-    
+      let data = pullData();
+      console.log(data);
     })
 
+
+    const yo = () => {
+        let p = pullData();
+        console.log(p)
+    }
   return (
     <div>
-        <button>Pull data</button>
+        <button onClick={() => yo()}>Pull data</button>
     </div>
   )
 }
